@@ -6,25 +6,19 @@ use App\Controller\AppController;
 * User personal interface
 *
 */
-class ArenasController  extends AppController
-{
-public function index()
-{
-}
+class ArenasController  extends AppController {
+	public function index(){
 
-public function login()
-{
-}
-
-public function fighter()
-{
-}
-
-public function sight()
-{
-}
-
-public function diary()
-{
-}
+	//die('test');
+	    $fighters = $this->fighters->find('all');
+		//$fighters = $this->fighters;
+		//$fighters = $this->fighters->find('all');
+		//$this->set('fighters', $this->fighters->find('all'))
+        $this->set(compact('events'));
+	}
+        
+	public function fighter(){
+	//die('tutu');
+	}
+        
 }
